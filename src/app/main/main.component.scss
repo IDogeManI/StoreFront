@@ -1,0 +1,52 @@
+@import "../../variables";
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.addToCartBtn {
+  justify-content: center;
+  align-items: center;
+  background-color: map-get($map: $colors, $key: "secondary2");
+  box-shadow: $base-box-shadow;
+  padding: $base-padding;
+}
+.element {
+  background-color: map-get($map: $colors, $key: "info");
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: $base-padding;
+  margin: $base-margin;
+  text-align: center;
+  font-size: $font-size-lg;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+.even {
+  grid-column: 1/13;
+}
+.odd {
+  grid-column: 1/13;
+}
+@media screen and (min-width: 768px) {
+  .even {
+    grid-column: 1/7;
+  }
+  .odd {
+    grid-column: 7/13;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .firstCol {
+    grid-column: 5/9;
+  }
+  .secondCol {
+    grid-column: 9/13;
+  }
+  .thirdCol {
+    grid-column: 1/5;
+  }
+}

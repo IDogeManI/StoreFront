@@ -1,0 +1,8 @@
+<nav class="navbar">
+  <a href="#" class="main" (click)="onMainClick()">Главная</a>
+
+  <a class="backet" (click)="onButtonClick()" href="#">
+    <img src="../../assets/backet.png" alt="backetImg" />
+    <p>В корзине: {{ cartService.countProductsInCart }}</p>
+  </a>
+</nav>

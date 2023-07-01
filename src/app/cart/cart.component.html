@@ -1,0 +1,12 @@
+<ng-container *ngFor="let product of cartService.productsInCart">
+  <div class="product">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <h1>{{ product.price }}$</h1>
+    <button class="deleteFromCartBtn" (click)="deleteFromCart(product)">
+      <h2>Убрать из корзины</h2>
+    </button>
+  </div>
+</ng-container>
+<input type="text" placeholder="Адресс..." class="adress" [(ngModel)]="adress">
+<button class="buyButton" (click)="buyRequest()">Купить</button>

@@ -1,0 +1,22 @@
+<div class="container">
+  <ng-container
+    *ngFor="let product of productService.allProducts; let i = index">
+    <div
+      class="element"
+      [ngClass]="{
+        even: i % 2 == 0,
+        odd: i % 2 == 1,
+        firstCol: i % 3 == 1,
+        secondCol: i % 3 == 2,
+        thirdCol: i % 3 == 0
+      }">
+      <img [src]="product.imageUrl" alt="image" />
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <h1>{{product.price}}$</h1>
+      <button class="addToCartBtn" (click)="onAddToCart(product)">
+        <h2>Добавить в корзину</h2>
+      </button>
+    </div>
+  </ng-container>
+</div>
