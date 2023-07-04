@@ -1,4 +1,4 @@
-export class Product {
+export class ProductDto {
   constructor(
     public id: string,
     public name: string,

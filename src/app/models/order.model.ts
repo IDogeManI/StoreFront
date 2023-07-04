@@ -1,4 +1,4 @@
-import { Product } from './product.model';
-export class Order {
-  constructor(public adress: string, public products: Product[]) {}
+import { ProductDto } from './product.model';
+export class OrderDto {
+  constructor(public adress: string, public products: ProductDto[]) {}
 }

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Product } from '../models/product.model';
+import { ProductDto } from '../models/product.model';
 import { CartService } from '../cart.service';
 import { ProductService } from '../product.service';
 
@@ -16,7 +16,7 @@ export class MainComponent implements OnInit {
   ngOnInit() {
     this.productService.fetchAllProducts();
   }
-  onAddToCart(product: Product) {
+  onAddToCart(product: ProductDto) {
     this.productService.deleteFromProducts(product);
     this.cartService.addProductToCart(product);
   }

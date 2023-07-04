@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CartService } from '../cart.service';
-import { Product } from '../models/product.model';
+import { ProductDto } from '../models/product.model';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class CartComponent {
     public productService: ProductService
   ) {}
   adress: string = 'asdf';
-  deleteFromCart(product: Product) {
+  deleteFromCart(product: ProductDto) {
     this.cartService.deleteProductFromCart(product);
   }
   buyRequest() {

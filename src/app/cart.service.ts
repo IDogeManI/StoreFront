@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Product } from './models/product.model';
+import { ProductDto } from './models/product.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
   countProductsInCart: number = 0;
-  productsInCart: Product[] = [];
+  productsInCart: ProductDto[] = [];
   constructor() {}
-  addProductToCart(product: Product) {
+  addProductToCart(product: ProductDto) {
     this.productsInCart.push(product);
     this.countProductsInCart++;
   }
-  deleteProductFromCart(product: Product) {
+  deleteProductFromCart(product: ProductDto) {
     this.productsInCart.splice(this.productsInCart.indexOf(product), 1);
     this.countProductsInCart--;
   }

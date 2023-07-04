@@ -1,0 +1,55 @@
+<div class="outer">
+  <div class="inner">
+    <h1 class="header">Login</h1>
+    <div *ngIf="showError" class="error" role="alert">
+      {{ errorMessage }}
+    </div>
+
+    <form
+      [formGroup]="loginForm"
+      autocomplete="off"
+      novalidate
+      (ngSubmit)="loginUser(loginForm.value)">
+      <div class="username">
+        <label for="username" class="usernameLabel">Username:</label>
+        <div class="usernameInput">
+          <input
+            type="text"
+            id="username"
+            formControlName="username"
+            class="form-control" placeholder="email" />
+        </div>
+        <div class="error usernameError">
+          <em
+            *ngIf="
+              validateControl('username') && hasError('username', 'required')
+            ">Username is required</em>
+        </div>
+      </div>
+      <div class="password">
+        <label for="password" class="passwordLabel">Password:</label>
+        <div class="passwordInput">
+          <input
+            type="password"
+            id="password"
+            formControlName="password"
+            class="form-control" placeholder="password" />
+        </div>
+        <div class="error passwordError">
+          <em
+            *ngIf="
+              validateControl('password') && hasError('password', 'required')
+            ">Password is required</em>
+        </div>
+      </div>
+      <br />
+      <div class="outerSubmit">
+        <div class="innerSubmit">
+          <button type="submit" class="submit" [disabled]="!loginForm.valid">
+            Login
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
