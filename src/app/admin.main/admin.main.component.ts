@@ -1,3 +1,4 @@
+import { ProductDto } from './../models/product.model';
 import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 

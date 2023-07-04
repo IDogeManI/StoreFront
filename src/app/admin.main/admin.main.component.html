@@ -1,12 +1,4 @@
-
-<ng-container *ngFor="let product of productService.allProducts; let i = index">
-  <div class="card">
-    <div class="cardComp">
-      <h1 class="name cardComp">{{ product.name }}</h1>
-      <p class="description cardComp">{{ product.description }}</p>
-      <h3 class="imageUrl cardComp">{{ product.imageUrl }}</h3>
-      <h2 class="price cardComp">{{ product.price }}$</h2>
-    </div>
-    <button class="button cardComp">Edit</button>
-  </div>
+<input type="text" class="input">
+<ng-container *ngFor="let value of productService.allProducts; let i = index">
+  <app-adminproductcard [product]="value"></app-adminproductcard>
 </ng-container>

@@ -1,39 +1,6 @@
 @import "../../variables";
 
-.card {
-  display: flex;
-  padding: $base-padding;
-  align-items: center;
-  justify-content: space-between;
-  margin: 5px 0;
-  background-color: map-get($map: $colors, $key: "primary");
-  color: white;
-  border-radius: $base-border-radius;
-  box-shadow: 0 -3px 3px 3px rgb(44, 138, 133) inset;
-}
-.cardComp {
-  margin: 5px 10px;
-  text-shadow: 1px 1px 1px rgb(0, 0, 0), 2px 2px 1px rgb(85, 85, 85);
-}
-.description {
-  display: flex;
-  text-align: justify;
-}
-.button {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: white;
-  text-decoration: none;
-  padding: 0.5em 1em;
-  border-radius: 3px;
-  background: rgb(64, 199, 192);
-  box-shadow: 0 -3px rgb(44, 138, 133) inset;
-  transition: 0.2s;
-}
-.button:hover {
-  background: rgb(50, 158, 153);
-}
-.button:active {
-  background: rgb(50, 158, 153);
-  box-shadow: 0 3px rgb(44, 138, 133) inset;
+input {
+  width: 100%;
+  height: 30px;
 }
