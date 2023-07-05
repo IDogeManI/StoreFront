@@ -1,4 +1,5 @@
-<input type="text" class="input">
-<ng-container *ngFor="let value of productService.allProducts; let i = index">
+<input type="text" class="input" [(ngModel)]="filterText"
+  (input)="filteArray()" placeholder="filter">
+<ng-container *ngFor="let value of products; let i = index">
   <app-adminproductcard [product]="value"></app-adminproductcard>
 </ng-container>

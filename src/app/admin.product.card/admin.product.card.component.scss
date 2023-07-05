@@ -19,6 +19,9 @@
   display: flex;
   text-align: justify;
 }
+.input {
+  text-shadow: none;
+}
 .button {
   font-weight: 700;
   font-size: 1.4rem;
@@ -36,4 +39,22 @@
 .button:active {
   background: rgb(50, 158, 153);
   box-shadow: 0 3px rgb(44, 138, 133) inset;
+}
+.buttonApply {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  background: rgb(64, 199, 129);
+  box-shadow: 0 -3px rgb(53, 167, 110) inset;
+  transition: 0.2s;
+}
+.buttonApply:hover {
+  background: rgb(53, 167, 110);
+}
+.buttonApply:active {
+  background: rgb(33, 147, 90);
+  box-shadow: 0 3px rgb(33, 147, 90) inset;
 }

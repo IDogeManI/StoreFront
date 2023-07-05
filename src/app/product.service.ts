@@ -26,27 +26,27 @@ export class ProductService {
     this.allProducts = [
       new ProductDto(
         'SomeId',
-        'Name',
+        'Ba',
         'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
         '../assets/boots.png',
         99
       ),
       new ProductDto(
         'SomeId',
+        'RT',
+        'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+        '../assets/boots.png',
+        99
+      ),
+      new ProductDto(
+        'sd',
         'Name',
         'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
         '../assets/boots.png',
         99
       ),
       new ProductDto(
-        'SomeId',
-        'Name',
-        'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
-        '../assets/boots.png',
-        99
-      ),
-      new ProductDto(
-        'SomeId',
+        'ga',
         'Name',
         'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
         '../assets/boots.png',
@@ -74,6 +74,9 @@ export class ProductService {
         99
       ),
     ];
+  }
+  changeProduct(product: ProductDto) {
+    this.httpClient.put('http://localhost:5126/api/Product', product);
   }
   buyRequest(adress: string, products: ProductDto[]) {
     let tmp: OrderDto = new OrderDto(adress, products);

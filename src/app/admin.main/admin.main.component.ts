@@ -8,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.main.component.scss'],
 })
 export class AdminMainComponent implements OnInit {
+  filterText: string;
+  products: ProductDto[];
   constructor(public productService: ProductService) {}
+  filteArray() {
+    this.products = this.productService.allProducts.filter((x) =>
+      x.name.toUpperCase().includes(this.filterText.toUpperCase())
+    );
+  }
   ngOnInit(): void {
     this.productService.fetchAllProducts();
+    this.products = this.productService.allProducts;
   }
 }

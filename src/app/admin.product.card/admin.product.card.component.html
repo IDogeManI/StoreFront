@@ -1,9 +1,18 @@
 <div class="card">
   <div class="cardComp">
-    <h1 class="name cardComp">{{ product.name }}</h1>
-    <p class="description cardComp">{{ product.description }}</p>
-    <h3 class="imageUrl cardComp">{{ product.imageUrl }}</h3>
-    <h2 class="price cardComp">{{ product.price }}$</h2>
+    <h1 class="name cardComp">{{ productName }}</h1>
+    <input *ngIf="editMode" type="text" class="name cardComp input"
+      [(ngModel)]="productName">
+    <p class="description cardComp">{{ productDescriptopn }}</p>
+    <input *ngIf="editMode" type="text" class="description cardComp input"
+      [(ngModel)]="productDescriptopn">
+    <h3 class="imageUrl cardComp">{{ productImageUrl }}</h3>
+    <input *ngIf="editMode" type="text" class="imageUrl cardComp input"
+      [(ngModel)]="productImageUrl">
+    <h2 class="price cardComp">{{ productPrice }}$</h2>
+    <input *ngIf="editMode" type="number" class="price cardComp input"
+      [(ngModel)]="productPrice">
   </div>
-  <button class="button cardComp" (click)="onEditClick()">Edit</button>
+  <button *ngIf="!editMode" class="button cardComp" (click)="onEditClick()">Edit</button>
+  <button *ngIf="editMode" class="buttonApply cardComp" (click)="onApplyClick()">Apply</button>
 </div>

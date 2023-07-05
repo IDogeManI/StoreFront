@@ -3,7 +3,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { AuthResponseDto } from '../models/authresponse.model';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -15,6 +15,7 @@ export class AdminLoginComponent implements OnInit {
   loginForm: FormGroup;
   errorMessage: string = '';
   showError: boolean;
+  @Output() onAuthtorization: EventEmitter<boolean>;
   constructor(
     private authService: AuthenticationService,
     private router: Router
@@ -47,10 +48,12 @@ export class AdminLoginComponent implements OnInit {
         localStorage.setItem('token', res.token);
         console.log(res);
         this.router.navigate(['/admin']);
+        this.onAuthtorization.emit(true);
       },
       error: (err: HttpErrorResponse) => {
         this.errorMessage = err.message;
         this.showError = true;
+        this.onAuthtorization.emit(false);
       },
     });
   }
