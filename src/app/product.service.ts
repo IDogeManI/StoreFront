@@ -9,10 +9,162 @@ import { OrderDto } from './models/order.model';
 })
 export class ProductService {
   public allProducts: ProductDto[] = [];
+  public allOrders: OrderDto[] = [];
   constructor(
     private httpClient: HttpClient,
     private cartService: CartService
   ) {}
+  fetchAllOrders() {
+    // this.httpClient
+    //   .get<Product[]>('http://localhost:5126/api/Product')
+    //   .subscribe((res) => {
+    //     this.allProducts = res;
+    //     this.cartService.productsInCart.forEach((product) => {
+    //       this.deleteFromProducts(product);
+    //     });
+    //     return "Success";
+    //   });
+    this.allOrders = [
+      new OrderDto('SomeAdress', [
+        new ProductDto(
+          'SomeId',
+          'Ba',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'SomeId',
+          'RT',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'sd',
+          'Name',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+      ]),
+      new OrderDto('SomeAdress', [
+        new ProductDto(
+          'SomeId',
+          'Ba',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'SomeId',
+          'RT',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'sd',
+          'Name',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+      ]),
+      new OrderDto('SomeAdress', [
+        new ProductDto(
+          'SomeId',
+          'Ba',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'SomeId',
+          'RT',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'sd',
+          'Name',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+      ]),
+      new OrderDto('SomeAdress', [
+        new ProductDto(
+          'SomeId',
+          'Ba',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'SomeId',
+          'RT',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'sd',
+          'Name',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+      ]),
+      new OrderDto('SomeAdress', [
+        new ProductDto(
+          'SomeId',
+          'Ba',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'SomeId',
+          'RT',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'sd',
+          'Name',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+      ]),
+      new OrderDto('SomeAdress', [
+        new ProductDto(
+          'SomeId',
+          'Ba',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'SomeId',
+          'RT',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+        new ProductDto(
+          'sd',
+          'Name',
+          'lorem assssssss    sddsds             sadasd                sadasda ddsdadsd          asdasd',
+          '../assets/boots.png',
+          99
+        ),
+      ]),
+    ];
+  }
   fetchAllProducts() {
     // this.httpClient
     //   .get<Product[]>('http://localhost:5126/api/Product')

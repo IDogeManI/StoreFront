@@ -1,3 +1,4 @@
+import { OrderDto } from '../models/order.model';
 import { ProductDto } from './../models/product.model';
 import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminMainComponent implements OnInit {
   filterText: string;
   products: ProductDto[];
+  orders: OrderDto[];
   constructor(public productService: ProductService) {}
   filteArray() {
     this.products = this.productService.allProducts.filter((x) =>
@@ -19,5 +21,7 @@ export class AdminMainComponent implements OnInit {
   ngOnInit(): void {
     this.productService.fetchAllProducts();
     this.products = this.productService.allProducts;
+    this.productService.fetchAllOrders();
+    this.orders = this.productService.allOrders;
   }
 }

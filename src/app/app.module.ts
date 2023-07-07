@@ -14,6 +14,7 @@ import { AppRouterModule } from './app.router/app.router.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminMainComponent } from './admin.main/admin.main.component';
 import { AdminProductCardComponent } from './admin.product.card/admin.product.card.component';
+import { AdminOrderCardComponent } from './admin.order.card/admin.order.card.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AdminProductCardComponent } from './admin.product.card/admin.product.ca
     AdminSpaceComponent,
     AdminMainComponent,
     AdminProductCardComponent,
+    AdminOrderCardComponent,
   ],
   imports: [
     BrowserModule,
