@@ -1,2 +1,3 @@
 <app-adminlogin *ngIf="!isAuthorized" (onAuthtorization)="isAuthorized=$event"></app-adminlogin>
-<app-adminmain *ngIf="isAuthorized"></app-adminmain>
+<app-adminmainorders *ngIf="isAuthorized && isOrders"></app-adminmainorders>
+<app-adminmainproducts *ngIf="isAuthorized && !isOrders"></app-adminmainproducts>

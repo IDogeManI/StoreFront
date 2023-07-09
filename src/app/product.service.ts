@@ -25,7 +25,7 @@ export class ProductService {
     //     return "Success";
     //   });
     this.allOrders = [
-      new OrderDto('SomeAdress', [
+      new OrderDto('SomeId', 'SomeAdress', [
         new ProductDto(
           'SomeId',
           'Ba',
@@ -48,7 +48,7 @@ export class ProductService {
           99
         ),
       ]),
-      new OrderDto('SomeAdress', [
+      new OrderDto('SomeId', 'SomeAdress', [
         new ProductDto(
           'SomeId',
           'Ba',
@@ -71,7 +71,7 @@ export class ProductService {
           99
         ),
       ]),
-      new OrderDto('SomeAdress', [
+      new OrderDto('SomeId', 'SomeAdress', [
         new ProductDto(
           'SomeId',
           'Ba',
@@ -94,7 +94,7 @@ export class ProductService {
           99
         ),
       ]),
-      new OrderDto('SomeAdress', [
+      new OrderDto('SomeId', 'SomeAdress', [
         new ProductDto(
           'SomeId',
           'Ba',
@@ -117,7 +117,7 @@ export class ProductService {
           99
         ),
       ]),
-      new OrderDto('SomeAdress', [
+      new OrderDto('SomeId', 'SomeAdress', [
         new ProductDto(
           'SomeId',
           'Ba',
@@ -140,7 +140,7 @@ export class ProductService {
           99
         ),
       ]),
-      new OrderDto('SomeAdress', [
+      new OrderDto('SomeId', 'SomeAdress', [
         new ProductDto(
           'SomeId',
           'Ba',
@@ -231,7 +231,7 @@ export class ProductService {
     this.httpClient.put('http://localhost:5126/api/Product', product);
   }
   buyRequest(adress: string, products: ProductDto[]) {
-    let tmp: OrderDto = new OrderDto(adress, products);
+    let tmp: OrderDto = new OrderDto('', adress, products);
     // // this.httpClient
     // //   .post('http://localhost:5126/api/Product', tmp)
     // //   .subscribe((res) => {

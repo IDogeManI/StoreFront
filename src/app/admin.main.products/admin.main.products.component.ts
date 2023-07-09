@@ -1,17 +1,16 @@
-import { OrderDto } from '../models/order.model';
-import { ProductDto } from './../models/product.model';
-import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
+import { OrderDto } from '../models/order.model';
+import { ProductDto } from '../models/product.model';
+import { ProductService } from '../product.service';
 
 @Component({
-  selector: 'app-adminmain',
-  templateUrl: './admin.main.component.html',
-  styleUrls: ['./admin.main.component.scss'],
+  selector: 'app-adminmainproducts',
+  templateUrl: './admin.main.products.component.html',
+  styleUrls: ['./admin.main.products.component.scss'],
 })
-export class AdminMainComponent implements OnInit {
+export class AdminMainProductsComponent implements OnInit {
   filterText: string;
   products: ProductDto[];
-  orders: OrderDto[];
   constructor(public productService: ProductService) {}
   filteArray() {
     this.products = this.productService.allProducts.filter((x) =>
@@ -21,7 +20,5 @@ export class AdminMainComponent implements OnInit {
   ngOnInit(): void {
     this.productService.fetchAllProducts();
     this.products = this.productService.allProducts;
-    this.productService.fetchAllOrders();
-    this.orders = this.productService.allOrders;
   }
 }

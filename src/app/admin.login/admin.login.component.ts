@@ -15,7 +15,7 @@ export class AdminLoginComponent implements OnInit {
   loginForm: FormGroup;
   errorMessage: string = '';
   showError: boolean;
-  @Output() onAuthtorization: EventEmitter<boolean>;
+  @Output() onAuthtorization: EventEmitter<boolean> = new EventEmitter();
   constructor(
     private authService: AuthenticationService,
     private router: Router

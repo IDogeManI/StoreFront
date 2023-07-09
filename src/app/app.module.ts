@@ -12,9 +12,10 @@ import { UserSpaceComponent } from './user.space/user.space.component';
 import { AdminSpaceComponent } from './admin.space/admin.space.component';
 import { AppRouterModule } from './app.router/app.router.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AdminMainComponent } from './admin.main/admin.main.component';
 import { AdminProductCardComponent } from './admin.product.card/admin.product.card.component';
 import { AdminOrderCardComponent } from './admin.order.card/admin.order.card.component';
+import { AdminMainProductsComponent } from './admin.main.products/admin.main.products.component';
+import { AdminMainOrdersComponent } from './admin.main.orders/admin.main.orders.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,10 @@ import { AdminOrderCardComponent } from './admin.order.card/admin.order.card.com
     AdminLoginComponent,
     UserSpaceComponent,
     AdminSpaceComponent,
-    AdminMainComponent,
     AdminProductCardComponent,
     AdminOrderCardComponent,
+    AdminMainProductsComponent,
+    AdminMainOrdersComponent,
   ],
   imports: [
     BrowserModule,
